@@ -16,12 +16,22 @@ interface ComputeParty {
   partyId: string;
 }
 
+interface ComputeFormInputs {
+  guess_position_row: string;
+  guess_position_col: string;
+  guess_secret_value: string;
+  public_integer_current_row_iterator: string;
+  public_integer_current_col_iterator: string;
+  [key: string]: string; // This allows for additional dynamic keys
+}
+
 interface ComputeProgramProps {
   shouldRescale?: boolean;
   nillionClient: nillion.NillionClient;
   programId: string;
   additionalComputeValues: nillion.NadaValues;
   storeIds: string[];
+  inputs:ComputeFormInputs;
   inputParties: ComputeParty[];
   outputParties: ComputeParty[];
   outputName: string;

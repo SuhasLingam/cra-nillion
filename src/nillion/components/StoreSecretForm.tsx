@@ -13,7 +13,7 @@ import TextField from '@mui/material/TextField';
 import { CircularProgress, List, ListItem, ListItemText } from '@mui/material';
 import PayButton from './PayButton';
 
-type SecretDataType = 'SecretBlob' | 'SecretInteger';
+type SecretDataType = 'SecretBlob' | 'SecretInteger' | 'PublicInteger';
 
 interface SecretFormProps {
   onNewStoredSecret: (data: any) => void;
